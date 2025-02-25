@@ -1,0 +1,290 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff0f5;
+    margin: 0;
+    padding: 0;
+    color: #8b4764;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff0f5;
+    box-shadow: 0 0 20px rgba(219, 112, 147, 0.2);
+    border-radius: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 30px 0;
+    background: linear-gradient(135deg, #ffcce6, #ffa6c9);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(219, 112, 147, 0.3);
+    border: 3px solid #ffb6c1;
+}
+
+h1 {
+    color: #d8336e;
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.6);
+}
+
+.subtitle {
+    font-style: italic;
+    color: #c25b83;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.photo-section {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.photo-frame {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: #ffcadc; /* Color sólido rosado como placeholder */
+    border: 10px solid white;
+    box-shadow: 0 0 20px rgba(219, 112, 147, 0.3), 0 0 0 4px #ffb6c1;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.photo-frame:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.3), transparent 60%);
+    pointer-events: none;
+}
+
+.message-container {
+    position: relative;
+    margin: 50px 0;
+    padding: 20px;
+}
+
+.message {
+    padding: 40px;
+    background-color: #ffeef4;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(219, 112, 147, 0.2);
+    text-align: center;
+    position: relative;
+    border: 3px solid #ffb6c1;
+    z-index: 2;
+}
+
+.message p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #8b4764;
+}
+
+.message p.love-paragraph {
+    color: #d8336e;
+    font-weight: bold;
+}
+
+.tulip-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.tulip {
+    position: absolute;
+}
+
+.tulip-top-left {
+    top: -30px;
+    left: -10px;
+    transform: rotate(15deg);
+}
+
+.tulip-top-right {
+    top: -35px;
+    right: -10px;
+    transform: rotate(-20deg) scale(0.9);
+}
+
+.tulip-bottom-left {
+    bottom: -35px;
+    left: 0;
+    transform: rotate(30deg) scale(0.85);
+}
+
+.tulip-bottom-right {
+    bottom: -30px;
+    right: 5px;
+    transform: rotate(-25deg) scale(0.9);
+}
+
+/* Tulipanes adicionales */
+.tulip-left-center {
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0);
+}
+
+.tulip-right-center {
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0);
+}
+
+.signature {
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+    color: #d8336e;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#ff1493, #e83e8c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.3);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #c25b83;
+    background-color: #ffecf3;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid #ffb6c1;
+}
+
+.hearts-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+    opacity: 0.4;
+    animation: float 15s infinite ease-in-out;
+}
+
+.mini-heart {
+    position: absolute;
+    opacity: 0.3;
+    animation: float-mini 12s infinite ease-in-out;
+    font-size: 10px;
+    color: #e83e8c;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(-100px) rotate(20deg);
+        opacity: 0;
+    }
+}
+
+@keyframes float-mini {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-60px) rotate(10deg);
+        opacity: 0;
+    }
+}
+
+/* Estilos de la cinta eliminados */
+
+.love-quote {
+    font-style: italic;
+    text-align: center;
+    margin: 30px 0;
+    padding: 15px;
+    background-color: #ffecf3;
+    border-radius: 10px;
+    border-left: 4px solid #e83e8c;
+    color: #c25b83;
+}
+
+.countdown {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #ffecf3;
+    border-radius: 10px;
+    border: 2px dashed #ffb6c1;
+}
+
+.countdown p {
+    margin: 5px 0;
+    color: #d8336e;
+}
+
+.music-note {
+    position: absolute;
+    font-size: 20px;
+    color: #e83e8c;
+    opacity: 0.6;
+    animation: float-notes 10s infinite ease-in-out;
+}
+
+@keyframes float-notes {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-80px) rotate(15deg);
+        opacity: 0.1;
+    }
+}
+
+@media (max-width: 600px) {
+    .photo-frame {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .message {
+        padding: 30px 20px;
+    }
+}
